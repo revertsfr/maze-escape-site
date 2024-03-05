@@ -22,4 +22,18 @@
         </div>
     </div>
 </body>
+<script>
+    const snowflakeContainer = document.querySelector('.snowflakes');
+
+    // Create 100 snowflakes
+    for (let i = 0; i < 100; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.innerHTML = '❄';
+        snowflake.style.left = `${Math.random() * 100}vw`;
+        snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Randomize falling speed
+        snowflake.style.animationDelay = `${Math.random() * 5}s`; // Randomize animation start time
+        snowflakeContainer.appendChild(snowflake);
+    }
+</script>
 </html>
