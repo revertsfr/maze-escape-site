@@ -19,18 +19,18 @@ body {
 
 .snowflake {
     position: absolute;
-    font-size: 2em;
+    font-size: 10px; /* Adjust the size of the snowflakes as needed */
     color: white; /* Setting the snowflake color to white */
     opacity: 0.8;
-    animation: falling 10s linear infinite;
+    animation: falling linear infinite;
 }
 
 @keyframes falling {
     0% {
-        transform: translateY(-100vh);
+        transform: translateY(-10vh) rotate(0deg);
     }
     100% {
-        transform: translateY(100vh);
+        transform: translateY(110vh) rotate(360deg);
     }
 }
 
