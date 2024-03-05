@@ -21,9 +21,10 @@ body {
     position: absolute;
     width: 2px; /* Adjust particle size as needed */
     height: 2px; /* Adjust particle size as needed */
-    background-color: magenta; /* Particle color */
+    background-color: white; /* Particle color */
     opacity: 0.8;
     animation: move 5s linear infinite; /* Adjust animation speed as needed */
+    left: calc(100vw * var(--random-x)); /* Randomize particle position horizontally */
 }
 
 @keyframes move {
