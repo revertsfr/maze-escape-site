@@ -2,7 +2,36 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: lightbrown;
+    background-color: black; /* Setting the background to black */
+    color: magenta; /* Setting the text color to magenta */
+    overflow: hidden; /* Hide overflow to prevent horizontal scroll due to snowflakes */
+}
+
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Snowflakes should not interfere with button clicks */
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.snowflake {
+    position: absolute;
+    font-size: 2em;
+    color: white; /* Setting the snowflake color to white */
+    opacity: 0.8;
+    animation: falling 10s linear infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
 }
 
 .container {
@@ -11,7 +40,7 @@ body {
 }
 
 .title {
-    color: black;
+    color: magenta; /* Setting the title color to magenta */
 }
 
 .buttons {
@@ -21,8 +50,8 @@ body {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: magenta;
-    color: lightbrown;
+    background-color: magenta; /* Setting the button background to magenta */
+    color: white; /* Setting the button text color to white */
     text-decoration: none;
     font-size: 16px;
     border: 2px solid white;
@@ -33,5 +62,5 @@ body {
 
 .button:hover {
     background-color: rgba(255, 255, 255, 0.8);
-    color: lightbrown;
+    color: magenta;
 }
