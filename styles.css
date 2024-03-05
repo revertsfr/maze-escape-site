@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightbrown;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20vh; /* Adjust as needed */
+}
+
+.title {
+    color: white;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: lightbrown;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: lightbrown;
+}
