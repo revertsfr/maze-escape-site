@@ -4,33 +4,34 @@ body {
     font-family: Arial, sans-serif;
     background-color: black; /* Setting the background to black */
     color: magenta; /* Setting the text color to magenta */
-    overflow: hidden; /* Hide overflow to prevent horizontal scroll due to snowflakes */
+    overflow: hidden; /* Hide overflow to prevent horizontal scroll due to particles */
 }
 
-.snowflakes {
+.particles {
     position: fixed;
     top: 0;
     left: 0;
-    pointer-events: none; /* Snowflakes should not interfere with button clicks */
     width: 100%;
     height: 100%;
     z-index: 1;
+    pointer-events: none; /* Particles should not interfere with button clicks */
 }
 
-.snowflake {
+.particle {
     position: absolute;
-    font-size: 10px; /* Adjust the size of the snowflakes as needed */
-    color: white; /* Setting the snowflake color to white */
+    width: 2px; /* Adjust particle size as needed */
+    height: 2px; /* Adjust particle size as needed */
+    background-color: magenta; /* Particle color */
     opacity: 0.8;
-    animation: falling linear infinite;
+    animation: move 5s linear infinite; /* Adjust animation speed as needed */
 }
 
-@keyframes falling {
+@keyframes move {
     0% {
-        transform: translateY(-10vh) rotate(0deg);
+        transform: translateY(-100vh) rotate(0deg);
     }
     100% {
-        transform: translateY(110vh) rotate(360deg);
+        transform: translateY(100vh) rotate(360deg);
     }
 }
 
